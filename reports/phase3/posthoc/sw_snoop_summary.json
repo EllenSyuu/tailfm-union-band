@@ -1,0 +1,222 @@
+[
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 0.5,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.4,
+  "sw_snoop_empty": 0.0033333333333333335,
+  "sw_snoop_width_median": 0.2458896404383476,
+  "union_intersection_width_median": 0.35155500000000006
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 0.5,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.16,
+  "sw_snoop_empty": 0.01,
+  "sw_snoop_width_median": 0.19844439318389634,
+  "union_intersection_width_median": 0.24829050000000003
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 1.0,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.39,
+  "sw_snoop_empty": 0.006666666666666667,
+  "sw_snoop_width_median": 0.5028841634616112,
+  "union_intersection_width_median": 0.7840815000000001
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 1.0,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.12666666666666668,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.39775358200719657,
+  "union_intersection_width_median": 0.5794999999999999
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9633333333333334,
+  "sw_snoop_empty": 0.0033333333333333335,
+  "sw_snoop_width_median": 0.2579151158881907,
+  "union_intersection_width_median": 0.342004
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.99,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.21126275034128608,
+  "union_intersection_width_median": 0.243707
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9766666666666667,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.5180450929309919,
+  "union_intersection_width_median": 0.627911
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.99,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.4242536699487529,
+  "union_intersection_width_median": 0.476288
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9766666666666667,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.253762165786241,
+  "union_intersection_width_median": 0.356076
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.99,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.20975917189418886,
+  "union_intersection_width_median": 0.2525165
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.98,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.5129459025808204,
+  "union_intersection_width_median": 0.614176
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.99,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.420433476626868,
+  "union_intersection_width_median": 0.46995400000000004
+ },
+ {
+  "family": "abs_t",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9733333333333334,
+  "sw_snoop_empty": 0.0033333333333333335,
+  "sw_snoop_width_median": 0.25671307493380474,
+  "union_intersection_width_median": 0.3427445
+ },
+ {
+  "family": "abs_t",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9966666666666667,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.20821318581198578,
+  "union_intersection_width_median": 0.23074299999999998
+ },
+ {
+  "family": "abs_t",
+  "rho": -2.0,
+  "xi": 1.0,
+  "n": 2000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9833333333333333,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.4966145421655331,
+  "union_intersection_width_median": 0.6002275
+ },
+ {
+  "family": "abs_t",
+  "rho": -2.0,
+  "xi": 1.0,
+  "n": 5000,
+  "in_assumption": true,
+  "sw_snoop_coverage": 0.9833333333333333,
+  "sw_snoop_empty": 0.0,
+  "sw_snoop_width_median": 0.4138555351171085,
+  "union_intersection_width_median": 0.4607525
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 0.5,
+  "n": 2000,
+  "in_assumption": false,
+  "sw_snoop_coverage": 0.0,
+  "sw_snoop_empty": 0.06,
+  "sw_snoop_width_median": 0.23560201570232953,
+  "union_intersection_width_median": 0.516174
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 0.5,
+  "n": 5000,
+  "in_assumption": false,
+  "sw_snoop_coverage": 0.0,
+  "sw_snoop_empty": 0.056666666666666664,
+  "sw_snoop_width_median": 0.16623085104869545,
+  "union_intersection_width_median": 0.3722455
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 1.0,
+  "n": 2000,
+  "in_assumption": false,
+  "sw_snoop_coverage": 0.0,
+  "sw_snoop_empty": 0.05333333333333334,
+  "sw_snoop_width_median": 0.5023357282861597,
+  "union_intersection_width_median": 1.248621
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 1.0,
+  "n": 5000,
+  "in_assumption": false,
+  "sw_snoop_coverage": 0.0,
+  "sw_snoop_empty": 0.043333333333333335,
+  "sw_snoop_width_median": 0.3276022420639785,
+  "union_intersection_width_median": 0.9613844999999999
+ }
+]

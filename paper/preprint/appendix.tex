@@ -1,0 +1,425 @@
+\section{Proofs}\label{app:proofs}
+
+Throughout, $K=k_m$ is the largest grid point. Exact Pareto tails ($\delta\equiv0$) are not
+in the class of Assumption~\ref{ass:A1}; wherever we argue ``under $p^{\otimes K}$'' the argument is
+for exact Pareto excesses directly and does not use Assumption~\ref{ass:A1}. Further, $E\sim\mathrm{Exp}(1)$, and for $s<1$ we use
+$\E e^{sE}=(1-s)^{-1}$ and $\E(Ee^{sE})=(1-s)^{-2}$.
+
+\subsection{Scores, efficiency and the bias factor}
+
+\begin{lemma}\label{lem:scores}
+Let $Y$ have the EPD$(\xi,\delta;\rho')$ distribution and $E=\xi^{-1}\log Y$. At $\delta=0$:
+\begin{enumerate}
+\item[(i)] the scores for $(\xi,\delta)$ are $\xi^{-1}(E-1)$ and $\xi^{-1}a_{\rho'}(E)$, with
+$a_{\rho'}(E)=(1-\rho')e^{\rho'E}-1$, and the Fisher information is
+$\xi^{-2}\begin{pmatrix}1&c'\\c'&d'\end{pmatrix}$ with $c'=\rho'/(1-\rho')$,
+$d'=\rho'^2/(1-2\rho')$; its determinant is $\xi^{-4}\rho'^4/\{(1-2\rho')(1-\rho')^2\}>0$;
+\item[(ii)] the efficient influence function for $\xi$ is $\xi\psi_{\rho'}(E)$ with $\psi_{\rho'}$
+as in Section~\ref{sec:bvm}, $\E\psi_{\rho'}(E)=0$ and $\operatorname{var}\psi_{\rho'}(E)=s(\rho')^2$;
+\item[(iii)] differentiating $y^{-1/\xi}\{1+\xi^{-1}\delta(y^{\rho/\xi}-1)\}$, the conditional
+survival function implied by Assumption~\ref{ass:A1} to first order in $\delta$, at
+$\delta=0$ gives the log-density derivative $h_\rho$ of \eqref{eq:h}, and
+$h_\rho(Y)=\xi^{-1}a_\rho(E)$;
+\item[(iv)] $\operatorname{cov}\{\psi_{\rho'}(E),a_\rho(E)\}=\beta(\rho,\rho')$ and
+$\operatorname{cov}\{E-1,a_\rho(E)\}=\rho/(1-\rho)$;
+\item[(v)] under exact Pareto excesses, the estimator of \citet{bjs2009} at the working
+value $\rho'$ satisfies $\sqrt{k}\{\hat\xi(\rho')-\xi\}/\xi=k^{-1/2}\sum_{i\le k}\psi_{\rho'}(E_i)+o_P(1)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The EPD log-density at $\delta=0$ is the Pareto log-density, whose $\xi$-score is
+$\xi^{-1}(E-1)$; the dependence of $\rho'/\xi$ on $\xi$ does not enter at $\delta=0$.
+Differentiating the EPD log-density in $\delta$ at $\delta=0$ gives $\xi^{-1}a_{\rho'}(E)$.
+The moments $\operatorname{var}(E)=1$, $\operatorname{cov}(E,a_{\rho'})=\rho'/(1-\rho')$ and
+$\operatorname{var}(a_{\rho'})=\rho'^2/(1-2\rho')$ follow from the two exponential moments.
+(ii) The efficient influence function is the first row of the inverse information applied to
+the scores: $\xi\{d'(E-1)-c'a_{\rho'}(E)\}/(d'-c'^2)$, and
+$d'/(d'-c'^2)=(1-\rho')^2/\rho'^2$, $c'/(d'-c'^2)=(1-2\rho')(1-\rho')/\rho'^3$. Its variance is
+$\xi^2d'/(d'-c'^2)=\xi^2s(\rho')^2$.
+(iii) Direct differentiation; with $y=e^{\xi E}$ the result is $\xi^{-1}\{(1-\rho)e^{\rho E}-1\}$.
+(iv) $\operatorname{cov}(a_{\rho'},a_\rho)=\rho\rho'/(1-\rho-\rho')$, and
+$\{d'\rho/(1-\rho)-c'\rho\rho'/(1-\rho-\rho')\}/(d'-c'^2)=\beta(\rho,\rho')$ by the identity
+$(1-\rho')(1-\rho-\rho')-(1-2\rho')(1-\rho)=\rho'(\rho'-\rho)$.
+(v) The estimator is $\hat\xi=H-\hat\delta\rho'/(1-\rho')$ with $H=k^{-1}\sum\xi E_i$,
+$\hat\delta=H(1-2\rho')(1-\rho')^3\rho'^{-4}\{M-(1-\rho')^{-1}\}$ and
+$M=k^{-1}\sum\exp(\rho'\xi E_i/H)$. Under exact Pareto excesses the $E_i$ are independent
+standard exponential, $H$ and $M$ are smooth functions of two sample means with finite
+variances (as $\rho'<0$), and the delta method gives an asymptotically linear expansion whose
+influence function, after the algebra, equals $\psi_{\rho'}$. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:beta}]
+All factors of $\beta$ other than $\rho'-\rho$ are positive or pair to the positive ratio
+$\rho/\rho'$. The Hill ratio follows from (iv): the Hill estimator has influence $E-1$, so its
+bias is $\lambda\rho/(1-\rho)$ by the argument of Theorem~\ref{thm:bvm}(ii). \qedhere
+\end{proof}
+
+\begin{lemma}\label{lem:suff}
+If $q_u/p=1+\delta(u)h_\rho+r_u$ with $\sup_{y\ge1}|r_u(y)|y^{-\epsilon}=o\{\delta(u)\}$ for some
+$\epsilon<1/(4\xi)$, then Assumption~\ref{ass:A2} holds.
+\end{lemma}
+
+\begin{proof}
+Let $v=\delta h_\rho+r_u\ge-1$ and $g(v)=(1+v)^{1/2}-1-v/2$, so that $|g(v)|\le v^2/2$ for
+$v\ge-1$. The integrand of Assumption~\ref{ass:A2} is $p\{g(v)+r_u/2\}^2\le2pg(v)^2+pr_u^2/2$.
+Since $h_\rho$ is bounded on $[1,\infty)$ and $\int y^{4\epsilon}p(y)\,dy<\infty$ for
+$4\epsilon<1/\xi$, $\int pr_u^2=o(\delta^2)$ and
+$\int pg(v)^2\le\frac14\int pv^4\le2\int p(\delta^4h_\rho^4+r_u^4)=o(\delta^2)$. \qedhere
+\end{proof}
+
+\subsection{Joint limits under Pareto tails}
+
+\begin{lemma}\label{lem:clt}
+Let $E_1,\dots,E_K$ be independent standard exponential and, for $j\le m$ and $i\le k_j$,
+$V^{(j)}_i=\sum_{l=i}^{k_j}E_l/l$. For functions $\phi$ with $\E\phi(E)=0$, $\E\phi(E)^2<\infty$ and
+$\phi',\phi''$ bounded on $[0,\infty)$, put $S_j(\phi)=k_j^{-1/2}\sum_{i\le k_j}\phi(V^{(j)}_i)$.
+Then for finitely many such pairs $(j,\phi)$ the vector of the $S_j(\phi)$ is asymptotically
+centred normal, and for $t_j\le t_{j'}$,
+$\lim\operatorname{cov}\{S_j(\phi),S_{j'}(\phi')\}=(t_j/t_{j'})^{1/2}\operatorname{cov}\{\phi(E),\phi'(E+\log(t_{j'}/t_j))\}$.
+\end{lemma}
+
+Under exact Pareto excesses above $X_{n-K,n}$, R\'enyi's representation gives
+\[
+\xi^{-1}\log(X_{n-i+1,n}/X_{n-k_j,n})=V^{(j)}_i\qquad(i\le k_j\le K)
+\]
+jointly, with the same $E_l$, namely the normalised spacings $l\,\xi^{-1}\log(X_{n-l+1,n}/X_{n-l,n})$.
+So every statistic $k_j^{-1/2}\sum_{i\le k_j}\phi\{\xi^{-1}\log(X_{n-i+1,n}/X_{n-k_j,n})\}$ equals
+$S_j(\phi)$ in law, jointly in $j$ and $\phi$. The functions $\psi_{\rho'}$ and $a_\rho$ satisfy the conditions of the
+lemma, because $\rho,\rho'<0$ make $e^{\rho z}$ and its derivatives bounded on $[0,\infty)$.
+
+\begin{proof}
+\emph{Linearisation.} Fix $j$ and write $r_i=\sum_{l=i}^{k_j}1/l=\E V^{(j)}_i$ and
+$V^{(j)}_i-r_i=\sum_{l=i}^{k_j}(E_l-1)/l$, so that $\E(V^{(j)}_i-r_i)^2=\sum_{l\ge i}l^{-2}\le2/i$.
+Taylor's theorem with $|\phi''|\le C$ gives
+\[
+S_j(\phi)=k_j^{-1/2}\sum_{i\le k_j}\phi(r_i)+k_j^{-1/2}\sum_{l\le k_j}w_{jl}(E_l-1)+R_j,\qquad
+w_{jl}=\frac1l\sum_{i\le l}\phi'(r_i),
+\]
+with $\E|R_j|\le Ck_j^{-1/2}\sum_{i\le k_j}2/i=O(k_j^{-1/2}\log k_j)\to0$. The weights satisfy
+$|w_{jl}|\le\sup|\phi'|$. The deterministic term is a Riemann sum: $r_i=\log(k_j/i)+O(1/i)$,
+so $k_j^{-1}\sum_{i\le k_j}\phi(r_i)=\int_0^1\phi(-\log s)\,ds+O(k_j^{-1}\log k_j)$, using
+$|\phi(r_i)-\phi(\log(k_j/i))|\le C/i$ and the monotone comparison of the sum with the integral
+for the function $s\mapsto\phi(-\log s)$, whose variation on $[1/k_j,1]$ is $O(\log k_j)$. Since
+$\int_0^1\phi(-\log s)\,ds=\E\phi(E)=0$, the deterministic term is $O(k_j^{-1/2}\log k_j)\to0$.
+
+\emph{Joint normality.} Hence, up to $o_P(1)$, every $S_j(\phi)$ is a linear form
+$\sum_{l\le K}c^{(n)}_{l}(E_l-1)$ in the same independent variables with coefficients bounded by
+$C k^{-1/2}$. For any fixed linear combination of finitely many such forms, the coefficients are
+again $O(k^{-1/2})$, so the Lindeberg condition holds and the Lindeberg--Feller theorem gives
+asymptotic normality of the combination, provided its variance converges; the Cram\'er--Wold
+device then gives joint asymptotic normality. Convergence of the variances follows from the
+covariance computation below.
+
+\emph{Covariance.} Let $j<j'$. The excesses $\{V^{(j)}_i\}_{i\le k_j}$ are functions of
+$E_1,\dots,E_{k_j}$, and $V^{(j')}_i=V^{(j)}_i+D$ for $i\le k_j$ with $D=\sum_{l=k_j+1}^{k_{j'}}E_l/l$,
+while $V^{(j')}_i$ for $k_j<i\le k_{j'}$ depends only on $E_{k_j+1},\dots,E_{k_{j'}}$. Hence
+$S_j(\phi)$ is independent of $D$ and of the second group, and
+\[
+\operatorname{cov}\{S_j(\phi),S_{j'}(\phi')\}=(k_jk_{j'})^{-1/2}\,\E_D\Bigl[\operatorname{cov}\Bigl\{\textstyle\sum_{i\le k_j}\phi(V^{(j)}_i),\sum_{i\le k_j}\phi'(V^{(j)}_i+D)\Bigm|D\Bigr\}\Bigr].
+\]
+The multiset $\{V^{(j)}_i\}_{i\le k_j}$ has the law of an independent sample of $k_j$ standard
+exponentials (R\'enyi), and both sums are symmetric functions of it, so the conditional
+covariance equals $k_j\operatorname{cov}\{\phi(E),\phi'(E+D)\}$ evaluated at the realised $D$. As
+$D\to\log(k_{j'}/k_j)\to\log(t_{j'}/t_j)$ in probability and the map
+$d\mapsto\operatorname{cov}\{\phi(E),\phi'(E+d)\}$ is bounded and continuous (by the bounds on
+$\phi'$), dominated convergence gives the stated limit. The case $j=j'$ gives
+$\operatorname{var}S_j(\phi)=\operatorname{var}\phi(E)$ exactly. \qedhere
+\end{proof}
+
+\subsection{Local asymptotic normality}
+
+Let $D^{(m)}=(X_{n-i+1,n}/X_{n-K,n})_{i\le K}$, taken in random order. Every statistic used in
+this paper, at every grid point and working value, is a function of $D^{(m)}$. Given
+$X_{n-K,n}=u$, $D^{(m)}$ is an independent sample from $q_u$; under exact Pareto tails it is an
+independent sample from $p$.
+
+\begin{lemma}\label{lem:lan}
+Assume \ref{ass:A1}--\ref{ass:A3}. For any deterministic sequence $u_n$ with
+$\sqrt{K}\,\delta(u_n)\to\lambda_m=\lambda$, the log-likelihood ratio of $q_{u_n}^{\otimes K}$
+with respect to $p^{\otimes K}$ satisfies, under $p^{\otimes K}$,
+$\log\prod_{i\le K}(q_{u_n}/p)(Y_i)=\lambda\Delta_K-\tfrac12\lambda^2\sigma_h^2+o_P(1)$, with
+$\Delta_K=K^{-1/2}\sum_{i\le K}h_\rho(Y_i)\dto N(0,\sigma_h^2)$ and $\sigma_h^2=\int h_\rho^2p=\xi^{-2}\rho^2/(1-2\rho)$. The two
+sequences of laws are mutually contiguous.
+\end{lemma}
+
+\begin{proof}
+Put $\eta_n=\delta(u_n)$ and $W_{i}=2\{(q_{u_n}/p)^{1/2}(Y_i)-1\}$. The function $h_\rho$ satisfies $\int h_\rho p=0$ and $\int h_\rho^2p<\infty$. Both $q_{u_n}$ and $p$ are densities on $[1,\infty)$ and $p>0$ there, so $q_{u_n}$ is absolutely continuous with respect to $p$ and the likelihood ratio $q_{u_n}/p$ is well defined; we do not assume the converse, since $q_{u_n}$ may vanish on part of $[1,\infty)$. On $N_n=\{q_{u_n}=0\}$ the integrand of Assumption~\ref{ass:A2} equals $p(1+\frac12\eta_nh_\rho)^2\ge p/4$ for $n$ large, because $h_\rho$ is bounded; hence $\int_{N_n}p=o(\eta_n^2)$, and the probability under $p^{\otimes K}$ that some $Y_i$ falls in $N_n$ is at most $K\int_{N_n}p=o(K\eta_n^2)=o(1)$. So with probability tending to one every $W_i>-2$ and the log-likelihood ratio below is finite. The argument in the proof of Theorem~7.2 of \citet{vandervaart1998} uses only the expansion
+$\int\{q_n^{1/2}-p^{1/2}-\frac12\eta_nh\,p^{1/2}\}^2=o(\eta_n^2)$ along the sequence and
+$\sqrt{K}\eta_n\to\lambda$, and yields $\sum_iW_i=\lambda\Delta_K-\lambda^2\sigma_h^2/4+o_P(1)$,
+$\sum_iW_i^2\to\lambda^2\sigma_h^2$ in probability and $\max_i|W_i|\to0$ in probability. Then
+$\log\prod(q/p)=\sum_i2\log(1+W_i/2)=\sum_iW_i-\frac14\sum_iW_i^2+o_P(1)$. Asymptotic
+normality of $\Delta_K$ is the central limit theorem, and contiguity follows from Le Cam's first
+lemma because the limit of the log-likelihood ratio is $N(-\lambda^2\sigma_h^2/2,\lambda^2\sigma_h^2)$.
+\qedhere
+\end{proof}
+
+Because $F$ is continuous above $x_0$, given $X_{n-K,n}=u>x_0$ the $K$ largest observations are
+an independent sample from $F$ conditioned on exceeding $u$; this defines the regular conditional
+law $\Prob_u$ of $D^{(m)}$. Since $X_{n-K,n}/U(n/K)\to1$ in probability and $\delta$ is regularly
+varying, the uniform convergence theorem gives $\sqrt K\delta(u_n)\to\lambda$ for every sequence
+with $u_n/U(n/K)\to1$.
+
+\emph{Unconditioning argument.} Let $T_n$ be a function of $D^{(m)}$ and $B$ a set with
+$L(\partial B)=0$, and suppose $\Prob_{u_n}(T_n\in B)\to L(B)$ for every deterministic sequence
+$u_n$ with $u_n/U(n/K)\to1$. Put
+$g_n(\eta)=\sup\{|\Prob_u(T_n\in B)-L(B)|:|u/U(n/K)-1|\le\eta\}$. Then $g_n(\eta_n)\to0$ for
+every $\eta_n\to0$ (otherwise choosing near-maximising $u_n$ would contradict the hypothesis).
+Choose $\eta_n\to0$ so slowly that $\Prob(|X_{n-K,n}/U(n/K)-1|>\eta_n)\to0$. Then
+$|\Prob(T_n\in B)-L(B)|\le g_n(\eta_n)+2\Prob(|X_{n-K,n}/U(n/K)-1|>\eta_n)\to0$. The same
+argument applies to expectations of bounded continuous functions, hence to convergence in
+distribution and in probability. We use it below without further comment.
+
+
+\begin{lemma}\label{lem:tests}
+Fix $\rho'<0$, let $\Theta$ be a compact subset of the validity region of the EPD$(\rho')$ model
+on which $1+\delta>0$, and let $\theta_0\in\Theta$. For a sample $Y_1,\dots,Y_k$ that is independent
+with distribution EPD$(\theta;\rho')$, $\theta=(\xi,\delta)\in\Theta$, and for every $\epsilon>0$,
+there are tests $\phi_k$ with $\E_{\theta_0}\phi_k\to0$ and
+$\sup\{\E_\theta(1-\phi_k):\theta\in\Theta,\ \|\theta-\theta_0\|\ge\epsilon\}\to0$.
+\end{lemma}
+
+\begin{proof}
+Write $G_\theta$ for the distribution function and $d(\theta,\theta')=\sup_{y\ge1}|G_\theta(y)-G_{\theta'}(y)|$.
+
+\emph{Continuity of $d$.} Since $y^{\rho'/\xi}\in(0,1]$, the factor $1+\delta-\delta y^{\rho'/\xi}$
+lies between $\min(1,1+\delta)$ and $\max(1,1+\delta)$, and by compactness
+$\min_\Theta\min(1,1+\delta)=:b>0$ and $\max_\Theta\xi=:\bar\xi<\infty$. Hence
+$1-G_\theta(y)\le(by)^{-1/\bar\xi}$ for $by\ge1$, uniformly over $\Theta$, so the tails beyond
+a large $Y$ contribute uniformly little to $d$. On $\Theta\times[1,Y]$ the map
+$(\theta,y)\mapsto G_\theta(y)$ is continuous, hence uniformly continuous. Together these give
+$d(\theta_n,\theta)\to0$ whenever $\theta_n\to\theta$ in $\Theta$, so by the triangle inequality
+$d$ is continuous on $\Theta\times\Theta$.
+
+\emph{Identifiability.} As $y\to\infty$,
+$\log\{1-G_\theta(y)\}=-\xi^{-1}\log y-\xi^{-1}\log(1+\delta)+o(1)$. If $G_\theta=G_{\theta'}$, the
+coefficients of $\log y$ give $\xi=\xi'$, and the constants then give $\delta=\delta'$. So
+$d(\theta,\theta')>0$ for $\theta\ne\theta'$.
+
+\emph{Separation.} The set $\{(\theta,\theta')\in\Theta^2:\|\theta-\theta'\|\ge\epsilon/2\}$ is
+compact and $d$ is continuous and positive on it, so
+$\eta=\min\{d(\theta,\theta'):\|\theta-\theta'\|\ge\epsilon/2\}>0$ (if the set is empty there is
+nothing to prove).
+
+\emph{Minimum-distance estimator and test.} Let $F_k$ be the empirical distribution function and
+$d_k(\theta)=\sup_y|F_k(y)-G_\theta(y)|$. Since $|d_k(\theta)-d_k(\theta')|\le d(\theta,\theta')$,
+$d_k$ is continuous on the compact $\Theta$ and has a minimiser $\hat\theta_k$. By the
+Dvoretzky--Kiefer--Wolfowitz inequality with the constant of \citet{massart1990},
+$\Prob_\theta\{d_k(\theta)>\eta/3\}\le2e^{-2k\eta^2/9}$ for every $\theta$. On the complement,
+$d(\hat\theta_k,\theta)\le d_k(\hat\theta_k)+d_k(\theta)\le2d_k(\theta)\le2\eta/3<\eta$, hence
+$\|\hat\theta_k-\theta\|<\epsilon/2$. Put $\phi_k=1\{\|\hat\theta_k-\theta_0\|\ge\epsilon/2\}$. Then
+$\E_{\theta_0}\phi_k\le2e^{-2k\eta^2/9}$, and if $\|\theta-\theta_0\|\ge\epsilon$, then
+$\|\hat\theta_k-\theta\|<\epsilon/2$ forces $\|\hat\theta_k-\theta_0\|>\epsilon/2$, so
+$\E_\theta(1-\phi_k)\le2e^{-2k\eta^2/9}$ uniformly in such $\theta$. \qedhere
+\end{proof}
+
+\subsection{Proofs of the main results}
+
+\begin{proof}[Proof of Theorem~\ref{thm:bvm}]
+Fix a sequence $u_n$ as in Lemma~\ref{lem:lan}; all probability statements are first conditional
+on $X_{n-K,n}=u_n$ and then unconditioned.
+
+(ii) Under $p^{\otimes K}$, by the remark after Lemma~\ref{lem:clt},
+$T_{jl}:=\sqrt{k_j}\{\tilde\xi_j(\rho_l)-\xi\}/\xi=S_j(\psi_{\rho_l})$ and
+$\xi\Delta_K=S_m(a_\rho)$, jointly. Hence $(T_{jl},\Delta_K)$ is jointly asymptotically normal under
+$p^{\otimes K}$, and $T\dto G$, which defines $G$ and gives \eqref{eq:cov}. By Lemma~\ref{lem:clt}
+with $j'=m$ and $\phi'=a_\rho$, $\lim\operatorname{cov}(T_{jl},\xi\Delta_K)=t_j^{1/2}
+\operatorname{cov}\{\psi_{\rho_l}(E),a_\rho(E+\log t_j^{-1})\}$. Since
+$a_\rho(E+r)=e^{\rho r}a_\rho(E)+(e^{\rho r}-1)$ and $\psi_{\rho_l}$ has mean zero, this equals
+$t_j^{1/2-\rho}\operatorname{cov}\{\psi_{\rho_l}(E),a_\rho(E)\}=t_j^{1/2-\rho}\beta(\rho,\rho_l)$
+by Lemma~\ref{lem:scores}(iv). Le Cam's third lemma \citep[Example~6.7]{vandervaart1998} and
+Lemma~\ref{lem:lan} give, under $q_{u_n}^{\otimes K}$, $T\dto G+\mu$ with
+$\mu_{jl}=\lambda t_j^{1/2-\rho}\beta(\rho,\rho_l)/\xi=(\lambda_j/\xi)\beta(\rho,\rho_l)$.
+
+(iii) Under $p^{\otimes K}$, Lemma~\ref{lem:scores}(v) applied at threshold $k_j$ gives
+$\sqrt{k_j}(\hat\xi_j-\tilde\xi_j)\to0$ in probability; contiguity transfers this to
+$q_{u_n}^{\otimes K}$.
+
+(i) Under $p^{\otimes K}$, the excesses over $X_{n-k_j,n}$ are, given that order statistic, an
+independent sample of size $k_j$ from the EPD$(\xi,0;\rho_l)$ model. This model is
+differentiable in quadratic mean at $(\xi,0)$, because on a neighbourhood of $(\xi,0)$ inside the
+open validity region $\{\delta>\max(-1,\xi/\rho_l)\}$ its density is continuously
+differentiable in the parameters with continuous Fisher information
+\citep[Lemma~7.6]{vandervaart1998}; the information is nonsingular by
+Lemma~\ref{lem:scores}(i). Uniformly consistent tests of $(\xi,0)$ against $\{\|\theta-(\xi,0)\|\ge\epsilon\}$ within the
+support of the prior exist by Lemma~\ref{lem:tests} below. The Bernstein--von Mises theorem
+\citep[Theorem~10.1]{vandervaart1998} gives total-variation convergence of the posterior of
+$\sqrt{k_j}(\vartheta-\xi,\delta)$ to the normal law with mean the efficient statistic and
+covariance the inverse information; its $\xi$-marginal is $N\{\sqrt{k_j}(\tilde\xi_j-\xi),
+\xi^2s(\rho_l)^2\}$ by Lemma~\ref{lem:scores}(ii). The total-variation distance is a function of
+$D^{(m)}$ that tends to zero in probability under $p^{\otimes K}$, hence under
+$q_{u_n}^{\otimes K}$ by contiguity. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:known}]
+By Theorem~\ref{thm:bvm}(i) and continuity of the normal distribution function, the endpoints of
+$B_j(\rho)$ are $\tilde\xi_j(\rho)\pm c(\rho)\xi s(\rho)/\sqrt{k_j}+o_P(k_j^{-1/2})$. The
+exact $(1-\alpha)$-quantile of the pivot under Pareto tails at the actual grid converges to
+$c(\rho)$, because by Lemma~\ref{lem:clt} the pivot converges in law to $\max_j|G_j|/s(\rho)$, whose
+distribution function is continuous and strictly increasing on $(0,\infty)$ for a non-degenerate
+Gaussian vector. (The computed constant is a Monte Carlo estimate of this quantile; the theory
+refers to the exact quantile, or to a Monte Carlo size that grows with $n$.) Hence $\{\xi\in B_j(\rho)\ \forall j\}$ differs from
+$\{\max_j|T_{j}|\le c(\rho)s(\rho)+o_P(1)\}$ by an event of vanishing probability, and with
+$\mu=0$ (since $\beta(\rho,\rho)=0$) the probability tends to
+$\Prob\{\max_j|G_j|\le c(\rho)s(\rho)\}=1-\alpha$, the distribution of $\max_j|G_j|$ being
+continuous. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:firstorder}]
+The Pareto posterior is the posterior in the one-parameter Pareto model, with a prior on $\xi$
+that is continuous and positive at $\xi$ and compactly supported (the one-parameter analogue of
+Assumption~\ref{ass:P}); the argument of Theorem~\ref{thm:bvm} with score $E-1$ shows that its centre is the Hill estimator with
+$\sqrt{k_j}(H_j-\xi)/\xi\dto G^H_j+\mu^H_j$, $\mu^H_j=(\lambda_j/\xi)\rho/(1-\rho)$, where $G^H$ has
+covariance $(t_j/t_{j'})^{1/2}$ by Lemma~\ref{lem:clt}, which is nonsingular for distinct $t_j$.
+The limiting coverage is $f(1)$ with $f(t)=\Prob(G^H+t\mu^H\in C)$ and
+$C=\{g:\max_j|g_j|\le c^H\}$, a bounded symmetric convex set with nonempty interior. By
+\citet{anderson1955}, $f$ is non-increasing on $[0,\infty)$. It is real-analytic, being an
+integral over $C$ of the non-degenerate Gaussian density shifted by $t\mu^H$, and $f(t)\to0$ as $t\to\infty$
+because $C$ is bounded. If $f(1)=f(0)$, $f$ would be constant on $[0,1]$ and hence everywhere,
+which is impossible. So $f(1)<f(0)=1-\alpha$. As $|\lambda|\to\infty$, $|\mu^H_m|\to\infty$ and
+$f(1)\le\Prob(|G^H_m+\mu^H_m|\le c^H)\to0$. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:union}]
+(a) As in the proof of Corollary~\ref{cor:known}, for each $l$ the endpoints of $B_j(\rho_l)$ are
+$\tilde\xi_j(\rho_l)\pm c_l\xi s_l/\sqrt{k_j}+o_P(k_j^{-1/2})$, so after multiplying by
+$\sqrt{k_j}/\xi$ the coverage event becomes
+$\{\forall j:\min_l(T_{jl}-c_ls_l)\le o_P(1),\ \max_l(T_{jl}+c_ls_l)\ge o_P(1)\}$. By
+Theorem~\ref{thm:bvm}(ii) and the continuous-mapping theorem, the probability converges to
+$\Gamma_\Mesh(\rho,\lambda)$, because the boundary of the limiting event is contained in the
+finite union of sets $\{g_{jl}=\pm c_ls_l-\mu_{jl}\}$, each of probability zero since every $G_{jl}$
+has variance $s_l^2>0$.
+(b) If $\rho=\rho_l$ then $\mu_{jl}=0$ for all $j$, and the limiting event contains
+$\{\max_j|G_{jl}|\le c_ls_l\}$, of probability $1-\alpha$. If $\lambda=0$ then $\mu=0$ and the same
+holds for every $l$.
+(c) $\{\xi\in U_j\ \forall j\}\subset\{\xi\in U_{\hat\jmath}\}$ pointwise on the sample space.
+(d) By Lemma~\ref{lem:beta}, $\beta(\rho,\rho_l)<0<\beta(\rho,\rho_{l'})$. Let $\lambda\to+\infty$
+(the case $-\infty$ is symmetric). Every $\lambda_j=\lambda t_j^{1/2-\rho}\to+\infty$, so
+$\mu_{jl}\to-\infty$ and $\mu_{jl'}\to+\infty$ for every $j$, and
+$\Gamma_\Mesh\ge1-\sum_j\{\Prob(G_{jl}+\mu_{jl}-c_ls_l>0)+\Prob(G_{jl'}+\mu_{jl'}+c_{l'}s_{l'}<0)\}\to1$.
+(e) If $\rho<\rho_1$, all $\beta(\rho,\rho_l)>0$. As $\lambda\to+\infty$,
+$\min_l(G_{ml}+\mu_{ml}-c_ls_l)\to+\infty$ in probability, so the limiting event at $j=m$, and
+hence $\Gamma_\Mesh$, has probability tending to zero; $\lambda\to-\infty$ and $\rho>\rho_L$ are
+symmetric.
+(f) The first statement follows as in (a). The hull contains every $B_j(\rho_l)$, whose scaled
+width tends to $2c_ls_l$, which gives the lower bound. Dividing by $|\lambda_j|$, $G/|\lambda_j|\to0$
+and $\mu_{jl}/|\lambda_j|=\pm\beta(\rho,\rho_l)/\xi$ give the last statement. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:uniform}]
+Write $\Gamma_\Mesh=1-\Prob(\mathcal{F})$, where $\mathcal{F}=\bigcup_j(F^+_j\cup F^-_j)$ with
+$F^+_j=\{\min_l(G_{jl}+\mu_{jl}-c_ls_l)>0\}$ (the hull lies above $\xi$ at $k_j$) and
+$F^-_j=\{\max_l(G_{jl}+\mu_{jl}+c_ls_l)<0\}$ (it lies below). Taking $l=1$ in the minimum and
+$l=L$ in the maximum,
+\[
+F^+_j\subseteq\{Z_{j1}>c_1-\mu_{j1}/s_1\},\qquad F^-_j\subseteq\{Z_{jL}<-c_L-\mu_{jL}/s_L\}.
+\]
+Let $\rho\in R$ and $\lambda\ge0$. Then $\lambda_j=\lambda t_j^{1/2-\rho}\ge0$, and since
+$\rho_1\le\rho\le\rho_L$, Lemma~\ref{lem:beta} gives $\beta(\rho,\rho_1)\le0\le\beta(\rho,\rho_L)$,
+so $\mu_{j1}\le0\le\mu_{jL}$ for every $j$. Hence $F^+_j\subseteq\{Z_{j1}>c_1\}$ and
+$F^-_j\subseteq\{Z_{jL}<-c_L\}$, and $\Prob(\mathcal{F})\le\varphi_\Mesh$. If $\lambda<0$ the signs are
+reversed, and the same two inclusions with $l=L$ in the minimum and $l=1$ in the maximum give
+$\mathcal{F}\subseteq\bigcup_j\{Z_{jL}>c_L\}\cup\{Z_{j1}<-c_1\}$, whose probability equals $\varphi_\Mesh$
+because $G$ and $-G$ have the same law. The union bound and the same symmetry give
+$\varphi_\Mesh\le\pi_1+\Prob(\min_jZ_{jL}<-c_L)=\pi_1+\pi_L$. The statement about $\hat\jmath$
+follows from Theorem~\ref{thm:union}(a) and (c). \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:uniform}]
+For the two-sided constants, $\alpha=\Prob(\max_j|Z_{jl}|>c_l)=\Prob(\max_jZ_{jl}>c_l)+
+\Prob(\min_jZ_{jl}<-c_l)-q_l=2\pi_l-q_l$, using the symmetry of $G$; so $\pi_l=(\alpha+q_l)/2$ and
+(ii) follows from Theorem~\ref{thm:uniform}. For (i), $\Prob(\max_jZ_{jl}>c_l)=\pi_l\ge\alpha/2$, so
+$c_l^+\ge c_l$ and $U_j\subseteq U_j^+$. The proof of Theorem~\ref{thm:union}(a) applies to $U^+$
+with $c_1,c_L$ replaced by $c_1^+,c_L^+$ (the distribution functions of $\max_jZ_{jl}$ and $\max_j(-Z_{jl})$ are equal, continuous
+and strictly increasing, so both finite-grid one-sided quantiles, and hence their maximum, converge
+to $c_l^+$ as in the proof of Corollary~\ref{cor:known}), and the proof of Theorem~\ref{thm:uniform} with these constants gives
+a limiting non-coverage probability at most $\Prob(\max_jZ_{j1}>c_1^+)+\Prob(\min_jZ_{jL}<-c_L^+)=\alpha$.
+Finally $\Prob(\max_j|Z_{jl}|>c_l^+)\le2\Prob(\max_jZ_{jl}>c^+_l)=\alpha$, so each endpoint band with
+constant $c_l^+$ is a valid two-sided simultaneous band. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:tight}]
+Let $\rho=\rho_1$ and $\lambda\to+\infty$. Then $\mu_{j1}=0$, while for $l\ge2$,
+$\beta(\rho_1,\rho_l)>0$ by Lemma~\ref{lem:beta} and $\mu_{jl}\to+\infty$ for every $j$. Hence,
+almost surely, $\min_l(G_{jl}+\mu_{jl}-c_ls_l)\to G_{j1}-c_1s_1$ and
+$\max_l(G_{jl}+\mu_{jl}+c_ls_l)\to+\infty$, so the indicator of the coverage event converges to
+the indicator of $\{\max_jZ_{j1}\le c_1\}$ except on the null set $\{\max_jZ_{j1}=c_1\}$. By
+dominated convergence $\Gamma_\Mesh(\rho_1,\lambda)\to1-\pi_1$. The case $\rho=\rho_L$,
+$\lambda\to-\infty$ is the mirror image and gives $1-\Prob(\min_jZ_{jL}<-c_L)=1-\pi_L$. Since
+$\rho_1,\rho_L\in R$, the infimum over $R\times\R$ is at most both limits; the lower bound is
+Theorem~\ref{thm:uniform}. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:cex}]
+Let $X,Y$ be independent standard normal, $(Z_{j1})_{j\le4}=(X,-X,X,-X)$ and
+$(Z_{j2})_{j\le4}=(Y,-Y,Y,-Y)$. Then $\max_j|Z_{jl}|$ is $|X|$ or $|Y|$, so the two-sided constants
+are $c_1=c_2=c:=z_{1-\alpha/2}$. Take $\nu_{\cdot1}=(0,0,-b,-b)$ and $\nu_{\cdot2}=(b,b,0,0)$ with
+$b>0$, which satisfy $\nu_{j1}\le0\le\nu_{j2}$. The hull fails at $j$ if both shifted components
+exceed $c$ or both are below $-c$. As $b\to\infty$ these events converge almost surely to
+$\{X>c\}$ ($j=1$), $\{X<-c\}$ ($j=2$), $\{Y<-c\}$ ($j=3$) and $\{Y>c\}$ ($j=4$), because the
+component carrying the shift $\pm b$ is eventually above $c$ or below $-c$, respectively. So the
+probability of the hull event tends to $\Prob(|X|\le c,|Y|\le c)=(1-\alpha)^2$. Here
+$q_l=\Prob(\max_jZ_{jl}>c,\min_jZ_{jl}<-c)=\Prob(|X|>c)=\alpha$. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:intersection}]
+$\xi\in\bigcap_jU_j$ if and only if $\xi\in U_j$ for every $j$. The width bound is trivial, and
+$\{I=\emptyset\}\subset\{\xi\notin I\}$. \qedhere
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:exact}]
+On $\{X_{n-K,n}>x_0\}$ the relative excesses above $X_{n-K,n}$ are an independent Pareto sample
+(as a set), so by R\'enyi's representation the vector $(\hat\xi_j(\rho')/\xi)_{j\le m}$ has a law
+that depends only on the grid and $\rho'$, and so does
+$Q=\max_j\sqrt{k_j}|\hat\xi_j(\rho')/\xi-1|/s(\rho')$. $Q$ has a continuous distribution because the $\hat\xi_j(\rho')$ are smooth non-constant functions of the continuously distributed $E_l$. If $c$ is the $(1-\alpha)$-quantile of $Q$,
+then $\Prob(Q\le c)=1-\alpha$, and $\{Q\le c\}$ is the event that $\xi$ lies in every interval of
+the stated band. \qedhere
+\end{proof}
+
+\subsection{The covariance of the limit}\label{app:cov}
+
+Write $\psi_r(E)=A_r(E-1)-B_ra_r(E)$ with $A_r=(1-r)^2/r^2$ and $B_r=(1-2r)(1-r)/r^3$. For $d\ge0$,
+$a_r(E+d)=(1-r)e^{rd}e^{rE}-1$, and with $E\sim\mathrm{Exp}(1)$, $\operatorname{var}E=1$,
+$\operatorname{cov}(E,e^{sE})=s/(1-s)^2$ and
+$\operatorname{cov}(e^{sE},e^{uE})=1/(1-s-u)-1/\{(1-s)(1-u)\}$ for $s,u<1$ with $s+u<1$ (here $s,u\le0$), so
+\begin{multline*}
+\operatorname{cov}\{\psi_r(E),\psi_{r'}(E+d)\}=A_rA_{r'}-A_rB_{r'}e^{r'd}\frac{r'}{1-r'}
+-A_{r'}B_r\frac{r}{1-r}\\
++B_rB_{r'}(1-r)(1-r')e^{r'd}\Bigl\{\frac1{1-r-r'}-\frac1{(1-r)(1-r')}\Bigr\}.
+\end{multline*}
+With \eqref{eq:cov} this gives the covariance matrix of $G$ in closed form; at $d=0$, $r=r'$ it
+reduces to $s(r)^2$, as Lemma~\ref{lem:scores}(ii) requires. The numerical evaluations of
+$\Gamma_\Mesh$, $\pi_l$, $q_l$ and $\varphi_\Mesh$ in Remark~\ref{rem:numeric} and
+Figure~\ref{fig:limit} sample $G$ from this Gaussian law; the prediction check of
+Section~\ref{sec:predict} instead simulates the estimators under Pareto tails at each setting's own
+grid, which retains finite-$k$ effects.
+
+\section{Reproducibility and data}\label{app:repro}
+
+All results are generated by scripts in the repository; seeds are recorded in the scripts and
+reports. The pre-registered benchmark (code frozen before the run, raw outputs and file hashes
+stored) uses a single test seed. Post hoc analyses use development seeds or regenerate the
+same benchmark samples from the stored seed, and are labelled as post hoc. The Danish fire
+losses are read at run time from the CRAN mirror of the R package \texttt{evir} (GPL $\ge2$) and
+are not redistributed. No other data are used.
+
+\begin{table}[ht]
+\centering\small
+\caption{Analyses, their status, and their sources in the repository.}
+\label{tab:analyses}
+\begin{tabular}{lll}
+\toprule
+Analysis & Status & Script / output\\
+\midrule
+Benchmark, Table~\ref{tab:bench} & pre-registered & \texttt{scripts/run\_phase3\_benchmark.py}\\
+Limit $\Gamma_\Mesh$, Figure~\ref{fig:limit} & post hoc (theory) & \texttt{scripts/theory\_union\_limit.py}\\
+$\pi_l$, $q_l$, $\varphi_\Mesh$, $U^+$, Remark~\ref{rem:numeric} & post hoc (theory) & \texttt{scripts/theory\_union\_endpoint\_bound.py}\\
+Prediction check, Figure~\ref{fig:predict} & post hoc & \texttt{scripts/theory\_union\_predict\_benchmark.py}\\
+Critical-value rescaling & post hoc & \texttt{scripts/theory\_union\_kappa.py}\\
+$\hat\rho$ audit & post hoc & \texttt{scripts/dev\_phase3\_rhohat\_tuning.py}\\
+Comparators, Table~\ref{tab:posthoc} & post hoc & \texttt{scripts/posthoc\_comparators.py}\\
+Danish data, Table~\ref{tab:danish} & frozen method & \texttt{scripts/apply\_danish.py}\\
+Numbers, tables, figures & --- & \texttt{scripts/build\_preprint\_assets.py}\\
+\bottomrule
+\end{tabular}
+\end{table}

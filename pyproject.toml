@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tailfm-union-band"
+version = "1.0.0"
+description = "Reproducibility code for 'Selection-valid inference for the tail index under second-order bias without estimating the second-order parameter'"
+authors = [{ name = "Ziyi Zhou" }]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "docs/licenses/MIT-prior.txt"]
+dependencies = ["numpy==2.3.5", "scipy==1.17.0", "matplotlib==3.10.8"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "sympy==1.13.1"]
+danish = ["pyreadr", "pandas"]
+
+[tool.setuptools.packages.find]
+include = ["tailfm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

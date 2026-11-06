@@ -1,0 +1,26 @@
+[
+ {
+  "kappa": 1.0,
+  "worst_coverage": 0.94435
+ },
+ {
+  "kappa": 0.95,
+  "worst_coverage": 0.92595
+ },
+ {
+  "kappa": 0.9,
+  "worst_coverage": 0.90205
+ },
+ {
+  "kappa": 0.88,
+  "worst_coverage": 0.89195
+ },
+ {
+  "kappa": 0.86,
+  "worst_coverage": 0.8801
+ },
+ {
+  "kappa": 0.84,
+  "worst_coverage": 0.8682
+ }
+]

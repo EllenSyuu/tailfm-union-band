@@ -1,0 +1,882 @@
+[
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 0.5,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7413883772530577,
+  "rho_cgp_iqr": [
+   -0.7523718189825839,
+   -0.7296637906112777
+  ],
+  "sw_pointwise": [
+   0.96,
+   0.9866666666666667,
+   0.9833333333333333,
+   0.81,
+   0.06333333333333334
+  ],
+  "sw_width": [
+   0.5159362500000001,
+   0.4006831500000001,
+   0.33068778666666676,
+   0.2872571700000001,
+   0.26487788666666656
+  ],
+  "sw_after_samsee": 0.89,
+  "sw_after_guillou_hall": 0.8066666666666666,
+  "sw_after_largest": 0.06333333333333334,
+  "cgp_post_simultaneous": 0.8033333333333333,
+  "cgp_post_after": {
+   "samsee": 0.94,
+   "guillou_hall": 0.91,
+   "largest": 0.84
+  },
+  "cgp_post_bandwidth_top": 0.2909271033333333,
+  "cgp_wald_simultaneous": 0.64,
+  "cgp_wald_after": {
+   "samsee": 0.9233333333333333,
+   "guillou_hall": 0.8166666666666667,
+   "largest": 0.9466666666666667
+  },
+  "cgp_wald_bandwidth_top": 0.2960093033333333
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 0.5,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7224267701817919,
+  "rho_cgp_iqr": [
+   -0.7344063829079094,
+   -0.7118929710993663
+  ],
+  "sw_pointwise": [
+   0.97,
+   0.98,
+   0.9733333333333334,
+   0.7166666666666667,
+   0.02
+  ],
+  "sw_width": [
+   0.3891536433333335,
+   0.31934765000000004,
+   0.26650294333333335,
+   0.23481706666666663,
+   0.21993857666666652
+  ],
+  "sw_after_samsee": 0.9233333333333333,
+  "sw_after_guillou_hall": 0.8566666666666667,
+  "sw_after_largest": 0.02,
+  "cgp_post_simultaneous": 0.7566666666666667,
+  "cgp_post_after": {
+   "samsee": 0.8866666666666667,
+   "guillou_hall": 0.92,
+   "largest": 0.8133333333333334
+  },
+  "cgp_post_bandwidth_top": 0.20345695666666666,
+  "cgp_wald_simultaneous": 0.7033333333333334,
+  "cgp_wald_after": {
+   "samsee": 0.93,
+   "guillou_hall": 0.84,
+   "largest": 0.96
+  },
+  "cgp_wald_bandwidth_top": 0.21874579000000002
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 1.0,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7428769813841085,
+  "rho_cgp_iqr": [
+   -0.7548926305218223,
+   -0.7313980453939128
+  ],
+  "sw_pointwise": [
+   0.9766666666666667,
+   0.9833333333333333,
+   0.96,
+   0.75,
+   0.023333333333333334
+  ],
+  "sw_width": [
+   1.0519486199999994,
+   0.8215233433333338,
+   0.6715445333333334,
+   0.5828667333333332,
+   0.5341472833333331
+  ],
+  "sw_after_samsee": 0.8633333333333333,
+  "sw_after_guillou_hall": 0.8133333333333334,
+  "sw_after_largest": 0.023333333333333334,
+  "cgp_post_simultaneous": 0.8633333333333333,
+  "cgp_post_after": {
+   "samsee": 0.9366666666666666,
+   "guillou_hall": 0.94,
+   "largest": 0.88
+  },
+  "cgp_post_bandwidth_top": 0.6223651933333334,
+  "cgp_wald_simultaneous": 0.6266666666666667,
+  "cgp_wald_after": {
+   "samsee": 0.9266666666666666,
+   "guillou_hall": 0.82,
+   "largest": 0.95
+  },
+  "cgp_wald_bandwidth_top": 0.6055670799999999
+ },
+ {
+  "family": "burr",
+  "rho": -0.5,
+  "xi": 1.0,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7236873833220964,
+  "rho_cgp_iqr": [
+   -0.7350315342162597,
+   -0.7133967366404317
+  ],
+  "sw_pointwise": [
+   0.9966666666666667,
+   0.9966666666666667,
+   0.9666666666666667,
+   0.75,
+   0.0
+  ],
+  "sw_width": [
+   0.7910242133333334,
+   0.6424347466666667,
+   0.5362672733333333,
+   0.47128377666666676,
+   0.4415085666666666
+  ],
+  "sw_after_samsee": 0.9333333333333333,
+  "sw_after_guillou_hall": 0.8933333333333333,
+  "sw_after_largest": 0.0,
+  "cgp_post_simultaneous": 0.8566666666666667,
+  "cgp_post_after": {
+   "samsee": 0.94,
+   "guillou_hall": 0.9566666666666667,
+   "largest": 0.9066666666666666
+  },
+  "cgp_post_bandwidth_top": 0.4396378333333333,
+  "cgp_wald_simultaneous": 0.74,
+  "cgp_wald_after": {
+   "samsee": 0.9733333333333334,
+   "guillou_hall": 0.84,
+   "largest": 0.97
+  },
+  "cgp_wald_bandwidth_top": 0.43695182666666665
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.8690105907684257,
+  "rho_cgp_iqr": [
+   -0.9055325913244361,
+   -0.8458562604193273
+  ],
+  "sw_pointwise": [
+   0.9333333333333333,
+   0.9533333333333334,
+   0.9833333333333333,
+   0.9933333333333333,
+   0.9933333333333333
+  ],
+  "sw_width": [
+   0.4862828966666664,
+   0.37001474999999984,
+   0.2960099200000002,
+   0.24450028666666668,
+   0.21143397666666666
+  ],
+  "sw_after_samsee": 0.9766666666666667,
+  "sw_after_guillou_hall": 0.9166666666666666,
+  "sw_after_largest": 0.9933333333333333,
+  "cgp_post_simultaneous": 0.9133333333333333,
+  "cgp_post_after": {
+   "samsee": 0.9566666666666667,
+   "guillou_hall": 0.9633333333333334,
+   "largest": 0.9566666666666667
+  },
+  "cgp_post_bandwidth_top": 0.2817346866666666,
+  "cgp_wald_simultaneous": 0.65,
+  "cgp_wald_after": {
+   "samsee": 0.9233333333333333,
+   "guillou_hall": 0.7833333333333333,
+   "largest": 0.9366666666666666
+  },
+  "cgp_wald_bandwidth_top": 0.26089164000000004
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.8922937765913733,
+  "rho_cgp_iqr": [
+   -0.9267572772645696,
+   -0.8610375973881959
+  ],
+  "sw_pointwise": [
+   0.96,
+   0.97,
+   0.9933333333333333,
+   1.0,
+   0.9966666666666667
+  ],
+  "sw_width": [
+   0.37240792666666667,
+   0.29171581333333313,
+   0.23704065,
+   0.20066390333333323,
+   0.1776514999999999
+  ],
+  "sw_after_samsee": 0.9933333333333333,
+  "sw_after_guillou_hall": 0.9666666666666667,
+  "sw_after_largest": 0.9966666666666667,
+  "cgp_post_simultaneous": 0.9066666666666666,
+  "cgp_post_after": {
+   "samsee": 0.97,
+   "guillou_hall": 0.9666666666666667,
+   "largest": 0.9633333333333334
+  },
+  "cgp_post_bandwidth_top": 0.19118855,
+  "cgp_wald_simultaneous": 0.73,
+  "cgp_wald_after": {
+   "samsee": 0.9433333333333334,
+   "guillou_hall": 0.8533333333333334,
+   "largest": 0.93
+  },
+  "cgp_wald_bandwidth_top": 0.18561632333333336
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.8734911521638792,
+  "rho_cgp_iqr": [
+   -0.9018520299973878,
+   -0.8430314703694928
+  ],
+  "sw_pointwise": [
+   0.94,
+   0.9633333333333334,
+   0.9833333333333333,
+   1.0,
+   0.9966666666666667
+  ],
+  "sw_width": [
+   0.996606266666667,
+   0.7503981966666669,
+   0.5969794100000001,
+   0.4874513133333332,
+   0.4207659666666666
+  ],
+  "sw_after_samsee": 0.9833333333333333,
+  "sw_after_guillou_hall": 0.9533333333333334,
+  "sw_after_largest": 0.9966666666666667,
+  "cgp_post_simultaneous": 0.94,
+  "cgp_post_after": {
+   "samsee": 0.98,
+   "guillou_hall": 0.9833333333333333,
+   "largest": 0.98
+  },
+  "cgp_post_bandwidth_top": 0.52942549,
+  "cgp_wald_simultaneous": 0.6933333333333334,
+  "cgp_wald_after": {
+   "samsee": 0.94,
+   "guillou_hall": 0.8033333333333333,
+   "largest": 0.93
+  },
+  "cgp_wald_bandwidth_top": 0.5237420300000001
+ },
+ {
+  "family": "burr",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.8956124696186547,
+  "rho_cgp_iqr": [
+   -0.9358320826605728,
+   -0.8684820552474682
+  ],
+  "sw_pointwise": [
+   0.96,
+   0.99,
+   0.9966666666666667,
+   1.0,
+   0.9966666666666667
+  ],
+  "sw_width": [
+   0.7456519800000005,
+   0.5912122699999994,
+   0.48155641666666676,
+   0.4044771800000001,
+   0.3573263766666666
+  ],
+  "sw_after_samsee": 0.9966666666666667,
+  "sw_after_guillou_hall": 0.9566666666666667,
+  "sw_after_largest": 0.9966666666666667,
+  "cgp_post_simultaneous": 0.9233333333333333,
+  "cgp_post_after": {
+   "samsee": 0.96,
+   "guillou_hall": 0.9766666666666667,
+   "largest": 0.95
+  },
+  "cgp_post_bandwidth_top": 0.37658620333333337,
+  "cgp_wald_simultaneous": 0.7833333333333333,
+  "cgp_wald_after": {
+   "samsee": 0.97,
+   "guillou_hall": 0.8666666666666667,
+   "largest": 0.9566666666666667
+  },
+  "cgp_wald_bandwidth_top": 0.37249034999999997
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -1.2201579968656522,
+  "rho_cgp_iqr": [
+   -1.3758677237790897,
+   -1.0954753339295116
+  ],
+  "sw_pointwise": [
+   0.9566666666666667,
+   0.9733333333333334,
+   0.9866666666666667,
+   0.9966666666666667,
+   1.0
+  ],
+  "sw_width": [
+   0.49373449333333347,
+   0.3717867366666665,
+   0.2934704366666665,
+   0.23978613333333343,
+   0.20367431000000014
+  ],
+  "sw_after_samsee": 0.9966666666666667,
+  "sw_after_guillou_hall": 0.96,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.9033333333333333,
+  "cgp_post_after": {
+   "samsee": 0.9733333333333334,
+   "guillou_hall": 0.94,
+   "largest": 0.97
+  },
+  "cgp_post_bandwidth_top": 0.2467757233333333,
+  "cgp_wald_simultaneous": 0.74,
+  "cgp_wald_after": {
+   "samsee": 0.9666666666666667,
+   "guillou_hall": 0.8333333333333334,
+   "largest": 0.9566666666666667
+  },
+  "cgp_wald_bandwidth_top": 0.22343349333333332
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -1.2027629022971928,
+  "rho_cgp_iqr": [
+   -1.361682176130949,
+   -1.0828900048179728
+  ],
+  "sw_pointwise": [
+   0.96,
+   0.9866666666666667,
+   0.99,
+   1.0,
+   1.0
+  ],
+  "sw_width": [
+   0.3715835766666668,
+   0.292602306666667,
+   0.23804009000000018,
+   0.19820571333333356,
+   0.17317164
+  ],
+  "sw_after_samsee": 0.9966666666666667,
+  "sw_after_guillou_hall": 0.96,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.8866666666666667,
+  "cgp_post_after": {
+   "samsee": 0.9733333333333334,
+   "guillou_hall": 0.9433333333333334,
+   "largest": 0.97
+  },
+  "cgp_post_bandwidth_top": 0.16916155000000002,
+  "cgp_wald_simultaneous": 0.83,
+  "cgp_wald_after": {
+   "samsee": 0.9633333333333334,
+   "guillou_hall": 0.9,
+   "largest": 0.9733333333333334
+  },
+  "cgp_wald_bandwidth_top": 0.16180130666666664
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -1.2492438006551718,
+  "rho_cgp_iqr": [
+   -1.4198141497851386,
+   -1.110487090348029
+  ],
+  "sw_pointwise": [
+   0.9533333333333334,
+   0.9566666666666667,
+   0.9733333333333334,
+   0.9966666666666667,
+   1.0
+  ],
+  "sw_width": [
+   1.0121483633333335,
+   0.7562460166666671,
+   0.5926389699999998,
+   0.4816505133333331,
+   0.4075823799999999
+  ],
+  "sw_after_samsee": 0.9866666666666667,
+  "sw_after_guillou_hall": 0.96,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.87,
+  "cgp_post_after": {
+   "samsee": 0.9466666666666667,
+   "guillou_hall": 0.9233333333333333,
+   "largest": 0.9466666666666667
+  },
+  "cgp_post_bandwidth_top": 0.46823716,
+  "cgp_wald_simultaneous": 0.7266666666666667,
+  "cgp_wald_after": {
+   "samsee": 0.9466666666666667,
+   "guillou_hall": 0.8466666666666667,
+   "largest": 0.95
+  },
+  "cgp_wald_bandwidth_top": 0.44353303
+ },
+ {
+  "family": "frechet",
+  "rho": -1.0,
+  "xi": 1.0,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -1.2305268379175958,
+  "rho_cgp_iqr": [
+   -1.3820570891187975,
+   -1.12480577859937
+  ],
+  "sw_pointwise": [
+   0.9633333333333334,
+   0.9833333333333333,
+   0.9933333333333333,
+   1.0,
+   1.0
+  ],
+  "sw_width": [
+   0.7550526266666665,
+   0.5900417133333332,
+   0.4773890533333332,
+   0.3986712900000002,
+   0.34616907333333374
+  ],
+  "sw_after_samsee": 1.0,
+  "sw_after_guillou_hall": 0.9666666666666667,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.92,
+  "cgp_post_after": {
+   "samsee": 0.9633333333333334,
+   "guillou_hall": 0.95,
+   "largest": 0.9666666666666667
+  },
+  "cgp_post_bandwidth_top": 0.33366835,
+  "cgp_wald_simultaneous": 0.8366666666666667,
+  "cgp_wald_after": {
+   "samsee": 0.9666666666666667,
+   "guillou_hall": 0.9133333333333333,
+   "largest": 0.9733333333333334
+  },
+  "cgp_wald_bandwidth_top": 0.32254497666666665
+ },
+ {
+  "family": "abs_t",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7528592406777148,
+  "rho_cgp_iqr": [
+   -0.7656832180309834,
+   -0.7407220344472941
+  ],
+  "sw_pointwise": [
+   0.91,
+   0.96,
+   0.9866666666666667,
+   1.0,
+   0.9766666666666667
+  ],
+  "sw_width": [
+   0.48809731666666645,
+   0.3781757166666665,
+   0.30040914666666685,
+   0.2490965066666666,
+   0.21981921000000018
+  ],
+  "sw_after_samsee": 0.9833333333333333,
+  "sw_after_guillou_hall": 0.9433333333333334,
+  "sw_after_largest": 0.9766666666666667,
+  "cgp_post_simultaneous": 0.9166666666666666,
+  "cgp_post_after": {
+   "samsee": 0.9733333333333334,
+   "guillou_hall": 0.9733333333333334,
+   "largest": 0.9566666666666667
+  },
+  "cgp_post_bandwidth_top": 0.2887422633333333,
+  "cgp_wald_simultaneous": 0.5833333333333334,
+  "cgp_wald_after": {
+   "samsee": 0.9333333333333333,
+   "guillou_hall": 0.7966666666666666,
+   "largest": 0.9066666666666666
+  },
+  "cgp_wald_bandwidth_top": 0.27584151
+ },
+ {
+  "family": "abs_t",
+  "rho": -1.0,
+  "xi": 0.5,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -0.7607402758521514,
+  "rho_cgp_iqr": [
+   -0.7720108701414956,
+   -0.7480845791059285
+  ],
+  "sw_pointwise": [
+   0.9666666666666667,
+   0.9833333333333333,
+   0.9966666666666667,
+   0.9966666666666667,
+   0.9966666666666667
+  ],
+  "sw_width": [
+   0.3710913766666668,
+   0.29340892666666674,
+   0.23897007666666695,
+   0.20506155000000006,
+   0.18387334
+  ],
+  "sw_after_samsee": 0.9966666666666667,
+  "sw_after_guillou_hall": 0.9766666666666667,
+  "sw_after_largest": 0.9966666666666667,
+  "cgp_post_simultaneous": 0.9266666666666666,
+  "cgp_post_after": {
+   "samsee": 0.9766666666666667,
+   "guillou_hall": 0.98,
+   "largest": 0.9766666666666667
+  },
+  "cgp_post_bandwidth_top": 0.19967309333333333,
+  "cgp_wald_simultaneous": 0.7166666666666667,
+  "cgp_wald_after": {
+   "samsee": 0.9333333333333333,
+   "guillou_hall": 0.8533333333333334,
+   "largest": 0.9266666666666666
+  },
+  "cgp_wald_bandwidth_top": 0.19969177333333335
+ },
+ {
+  "family": "abs_t",
+  "rho": -2.0,
+  "xi": 1.0,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -2.0670407425214687,
+  "rho_cgp_iqr": [
+   -2.1457783776458323,
+   -2.004622536121699
+  ],
+  "sw_pointwise": [
+   0.9466666666666667,
+   0.9666666666666667,
+   0.9833333333333333,
+   0.99,
+   1.0
+  ],
+  "sw_width": [
+   0.9768482833333332,
+   0.7482141400000001,
+   0.5882884966666666,
+   0.47036448333333314,
+   0.39465040999999995
+  ],
+  "sw_after_samsee": 0.99,
+  "sw_after_guillou_hall": 0.9566666666666667,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.9066666666666666,
+  "cgp_post_after": {
+   "samsee": 0.96,
+   "guillou_hall": 0.9466666666666667,
+   "largest": 0.9566666666666667
+  },
+  "cgp_post_bandwidth_top": 0.39525628333333335,
+  "cgp_wald_simultaneous": 0.8,
+  "cgp_wald_after": {
+   "samsee": 0.9633333333333334,
+   "guillou_hall": 0.8633333333333333,
+   "largest": 0.9633333333333334
+  },
+  "cgp_wald_bandwidth_top": 0.36926623
+ },
+ {
+  "family": "abs_t",
+  "rho": -2.0,
+  "xi": 1.0,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": true,
+  "rho_cgp_median": -2.0162395008108254,
+  "rho_cgp_iqr": [
+   -2.1023669623354175,
+   -1.9462356583289044
+  ],
+  "sw_pointwise": [
+   0.9533333333333334,
+   0.9733333333333334,
+   0.9866666666666667,
+   1.0,
+   1.0
+  ],
+  "sw_width": [
+   0.7454458300000002,
+   0.5802388399999999,
+   0.47154000999999984,
+   0.3918419533333333,
+   0.33840717666666675
+  ],
+  "sw_after_samsee": 1.0,
+  "sw_after_guillou_hall": 0.9566666666666667,
+  "sw_after_largest": 1.0,
+  "cgp_post_simultaneous": 0.8866666666666667,
+  "cgp_post_after": {
+   "samsee": 0.9666666666666667,
+   "guillou_hall": 0.9466666666666667,
+   "largest": 0.9633333333333334
+  },
+  "cgp_post_bandwidth_top": 0.2767413233333333,
+  "cgp_wald_simultaneous": 0.8433333333333334,
+  "cgp_wald_after": {
+   "samsee": 0.96,
+   "guillou_hall": 0.9166666666666666,
+   "largest": 0.9766666666666667
+  },
+  "cgp_wald_bandwidth_top": 0.2664231833333333
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 0.5,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": false,
+  "rho_cgp_median": -0.7029992902002047,
+  "rho_cgp_iqr": [
+   -0.7126974067067219,
+   -0.6938723672347326
+  ],
+  "sw_pointwise": [
+   0.9533333333333334,
+   0.7366666666666667,
+   0.21333333333333335,
+   0.0,
+   0.0
+  ],
+  "sw_width": [
+   0.6616212366666665,
+   0.5341535799999999,
+   0.45119405666666673,
+   0.4109206833333332,
+   0.4035887966666667
+  ],
+  "sw_after_samsee": 0.31,
+  "sw_after_guillou_hall": 0.6166666666666667,
+  "sw_after_largest": 0.0,
+  "cgp_post_simultaneous": 0.0,
+  "cgp_post_after": {
+   "samsee": 0.6,
+   "guillou_hall": 0.6933333333333334,
+   "largest": 0.0
+  },
+  "cgp_post_bandwidth_top": 0.36969138,
+  "cgp_wald_simultaneous": 0.51,
+  "cgp_wald_after": {
+   "samsee": 0.94,
+   "guillou_hall": 0.8033333333333333,
+   "largest": 0.7533333333333333
+  },
+  "cgp_wald_bandwidth_top": 0.3841622
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 0.5,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": false,
+  "rho_cgp_median": -0.671559725218452,
+  "rho_cgp_iqr": [
+   -0.6811186558938628,
+   -0.662758638603427
+  ],
+  "sw_pointwise": [
+   0.93,
+   0.5333333333333333,
+   0.03333333333333333,
+   0.0,
+   0.0
+  ],
+  "sw_width": [
+   0.48472724333333306,
+   0.4055961333333333,
+   0.3553520233333333,
+   0.32840934333333316,
+   0.32451985333333344
+  ],
+  "sw_after_samsee": 0.33666666666666667,
+  "sw_after_guillou_hall": 0.6233333333333333,
+  "sw_after_largest": 0.0,
+  "cgp_post_simultaneous": 0.0,
+  "cgp_post_after": {
+   "samsee": 0.6066666666666667,
+   "guillou_hall": 0.7766666666666666,
+   "largest": 0.0
+  },
+  "cgp_post_bandwidth_top": 0.24753984000000004,
+  "cgp_wald_simultaneous": 0.49333333333333335,
+  "cgp_wald_after": {
+   "samsee": 0.97,
+   "guillou_hall": 0.89,
+   "largest": 0.5866666666666667
+  },
+  "cgp_wald_bandwidth_top": 0.27766131666666666
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 1.0,
+  "n": 2000,
+  "reps": 300,
+  "in_assumption": false,
+  "rho_cgp_median": -0.7041713649941127,
+  "rho_cgp_iqr": [
+   -0.7137472078864575,
+   -0.694944622007178
+  ],
+  "sw_pointwise": [
+   0.96,
+   0.7733333333333333,
+   0.20333333333333334,
+   0.0,
+   0.0
+  ],
+  "sw_width": [
+   1.322595056666666,
+   1.0638636933333332,
+   0.9056387333333333,
+   0.82489572,
+   0.8061688700000001
+  ],
+  "sw_after_samsee": 0.3,
+  "sw_after_guillou_hall": 0.5833333333333334,
+  "sw_after_largest": 0.0,
+  "cgp_post_simultaneous": 0.36333333333333334,
+  "cgp_post_after": {
+   "samsee": 0.7666666666666667,
+   "guillou_hall": 0.79,
+   "largest": 0.42333333333333334
+  },
+  "cgp_post_bandwidth_top": 0.9603466566666666,
+  "cgp_wald_simultaneous": 0.5333333333333333,
+  "cgp_wald_after": {
+   "samsee": 0.95,
+   "guillou_hall": 0.8433333333333334,
+   "largest": 0.73
+  },
+  "cgp_wald_bandwidth_top": 0.7733658633333333
+ },
+ {
+  "family": "burr",
+  "rho": -0.25,
+  "xi": 1.0,
+  "n": 5000,
+  "reps": 300,
+  "in_assumption": false,
+  "rho_cgp_median": -0.6729065676174644,
+  "rho_cgp_iqr": [
+   -0.6800184511443642,
+   -0.664166181322194
+  ],
+  "sw_pointwise": [
+   0.9033333333333333,
+   0.53,
+   0.03666666666666667,
+   0.0,
+   0.0
+  ],
+  "sw_width": [
+   0.9725371233333336,
+   0.8153755999999996,
+   0.7094789533333333,
+   0.6546105166666665,
+   0.6499766199999999
+  ],
+  "sw_after_samsee": 0.30333333333333334,
+  "sw_after_guillou_hall": 0.6166666666666667,
+  "sw_after_largest": 0.0,
+  "cgp_post_simultaneous": 0.3233333333333333,
+  "cgp_post_after": {
+   "samsee": 0.78,
+   "guillou_hall": 0.8466666666666667,
+   "largest": 0.4166666666666667
+  },
+  "cgp_post_bandwidth_top": 0.64000233,
+  "cgp_wald_simultaneous": 0.4766666666666667,
+  "cgp_wald_after": {
+   "samsee": 0.96,
+   "guillou_hall": 0.8766666666666667,
+   "largest": 0.6
+  },
+  "cgp_wald_bandwidth_top": 0.5564731666666667
+ }
+]

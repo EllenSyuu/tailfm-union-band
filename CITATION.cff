@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the preprint."
+title: "tailfm-union-band: reproducibility code for selection-valid tail-index inference"
+authors:
+  - family-names: Zhou
+    given-names: Ziyi
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/EllenSyuu/tailfm-union-band"
+preferred-citation:
+  type: article
+  title: "Selection-valid inference for the tail index under second-order bias without estimating the second-order parameter"
+  authors:
+    - family-names: Zhou
+      given-names: Ziyi
+  year: 2026
+  notes: "Preprint"
