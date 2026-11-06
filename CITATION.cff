@@ -5,6 +5,7 @@ authors:
   - family-names: Zhou
     given-names: Ziyi
 version: 1.0.0
+doi: 10.5281/zenodo.24022373
 license: Apache-2.0
 repository-code: "https://github.com/EllenSyuu/tailfm-union-band"
 preferred-citation:

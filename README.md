@@ -5,7 +5,9 @@ Code and stored outputs for the preprint
 > Ziyi Zhou. *Selection-valid inference for the tail index under second-order bias without
 > estimating the second-order parameter.* Preprint, 2026.
 
-Release `v1.0.0` corresponds to version 1 of the preprint. Every number, table and figure
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24022373.svg)](https://doi.org/10.5281/zenodo.24022373)
+
+Release `v1.0.0` (archived at <https://doi.org/10.5281/zenodo.24022373>) corresponds to version 1 of the preprint. Every number, table and figure
 in the paper is generated from the files in `reports/` by `scripts/build_preprint_assets.py`.
 
 ## Contents
