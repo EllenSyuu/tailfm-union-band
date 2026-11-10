@@ -44,8 +44,12 @@ $(1-\rho')(1-\rho-\rho')-(1-2\rho')(1-\rho)=\rho'(\rho'-\rho)$.
 (v) The estimator is $\hat\xi=H-\hat\delta\rho'/(1-\rho')$ with $H=k^{-1}\sum\xi E_i$,
 $\hat\delta=H(1-2\rho')(1-\rho')^3\rho'^{-4}\{M-(1-\rho')^{-1}\}$ and
 $M=k^{-1}\sum\exp(\rho'\xi E_i/H)$. Under exact Pareto excesses the $E_i$ are independent
-standard exponential, $H$ and $M$ are smooth functions of two sample means with finite
-variances (as $\rho'<0$), and the delta method gives an asymptotically linear expansion whose
+standard exponential and $\varepsilon=H/\xi-1=O_P(k^{-1/2})$. Write
+$M=k^{-1}\sum f(E_i,\varepsilon)$ with $f(e,t)=\exp\{\rho'e/(1+t)\}$. As $\rho'<0$ and $e\ge0$,
+$|\partial_t^2f(e,t)|\le C(e+e^2)$ for $|t|\le1/2$, so
+$M=k^{-1}\sum e^{\rho'E_i}-\varepsilon\rho'k^{-1}\sum E_ie^{\rho'E_i}+O_P(k^{-1})$.
+Up to $o_P(k^{-1/2})$, $\hat\xi$ is therefore a smooth function of three sample means with finite
+variances, and the delta method gives an asymptotically linear expansion whose
 influence function, after the algebra, equals $\psi_{\rho'}$. \qedhere
 \end{proof}
 
@@ -75,8 +79,8 @@ Let $E_1,\dots,E_K$ be independent standard exponential and, for $j\le m$ and $i
 $V^{(j)}_i=\sum_{l=i}^{k_j}E_l/l$. For functions $\phi$ with $\E\phi(E)=0$, $\E\phi(E)^2<\infty$ and
 $\phi',\phi''$ bounded on $[0,\infty)$, put $S_j(\phi)=k_j^{-1/2}\sum_{i\le k_j}\phi(V^{(j)}_i)$.
 Then for finitely many such pairs $(j,\phi)$ the vector of the $S_j(\phi)$ is asymptotically
-centred normal, and for $t_j\le t_{j'}$,
-$\lim\operatorname{cov}\{S_j(\phi),S_{j'}(\phi')\}=(t_j/t_{j'})^{1/2}\operatorname{cov}\{\phi(E),\phi'(E+\log(t_{j'}/t_j))\}$.
+centred normal, and for two such functions $\phi,\chi$ and $t_j\le t_{j'}$,
+$\lim\operatorname{cov}\{S_j(\phi),S_{j'}(\chi)\}=(t_j/t_{j'})^{1/2}\operatorname{cov}\{\phi(E),\chi(E+\log(t_{j'}/t_j))\}$.
 \end{lemma}
 
 Under exact Pareto excesses above $X_{n-K,n}$, R\'enyi's representation gives
@@ -96,11 +100,14 @@ Taylor's theorem with $|\phi''|\le C$ gives
 S_j(\phi)=k_j^{-1/2}\sum_{i\le k_j}\phi(r_i)+k_j^{-1/2}\sum_{l\le k_j}w_{jl}(E_l-1)+R_j,\qquad
 w_{jl}=\frac1l\sum_{i\le l}\phi'(r_i),
 \]
-with $\E|R_j|\le Ck_j^{-1/2}\sum_{i\le k_j}2/i=O(k_j^{-1/2}\log k_j)\to0$. The weights satisfy
+with $|R_j|\le Ck_j^{-1/2}\sum_{i\le k_j}(V^{(j)}_i-r_i)^2$. Since
+$\E(V^{(j)}_i-r_i)^4\le9(\sum_{l\ge i}l^{-2})^2\le36/i^2$, Minkowski's inequality gives
+$(\E R_j^2)^{1/2}\le Ck_j^{-1/2}\sum_{i\le k_j}6/i=O(k_j^{-1/2}\log k_j)\to0$. The weights satisfy
 $|w_{jl}|\le\sup|\phi'|$. The deterministic term is a Riemann sum: $r_i=\log(k_j/i)+O(1/i)$,
 so $k_j^{-1}\sum_{i\le k_j}\phi(r_i)=\int_0^1\phi(-\log s)\,ds+O(k_j^{-1}\log k_j)$, using
 $|\phi(r_i)-\phi(\log(k_j/i))|\le C/i$ and the monotone comparison of the sum with the integral
-for the function $s\mapsto\phi(-\log s)$, whose variation on $[1/k_j,1]$ is $O(\log k_j)$. Since
+for the function $s\mapsto\phi(-\log s)$, whose variation on $[1/k_j,1]$ is $O(\log k_j)$, together with
+$\int_0^{1/k_j}|\phi(-\log s)|\,ds=O(k_j^{-1}\log k_j)$, as $|\phi(z)|\le C(1+z)$. Since
 $\int_0^1\phi(-\log s)\,ds=\E\phi(E)=0$, the deterministic term is $O(k_j^{-1/2}\log k_j)\to0$.
 
 \emph{Joint normality.} Hence, up to $o_P(1)$, every $S_j(\phi)$ is a linear form
@@ -108,22 +115,23 @@ $\sum_{l\le K}c^{(n)}_{l}(E_l-1)$ in the same independent variables with coeffic
 $C k^{-1/2}$. For any fixed linear combination of finitely many such forms, the coefficients are
 again $O(k^{-1/2})$, so the Lindeberg condition holds and the Lindeberg--Feller theorem gives
 asymptotic normality of the combination, provided its variance converges; the Cram\'er--Wold
-device then gives joint asymptotic normality. Convergence of the variances follows from the
-covariance computation below.
+device then gives joint asymptotic normality. Since the remainders and the deterministic terms
+vanish in $L^2$, the variance of each combination differs by $o(1)$ from that of the same
+combination of the $S_j(\phi)$, which converges by the covariance computation below.
 
 \emph{Covariance.} Let $j<j'$. The excesses $\{V^{(j)}_i\}_{i\le k_j}$ are functions of
 $E_1,\dots,E_{k_j}$, and $V^{(j')}_i=V^{(j)}_i+D$ for $i\le k_j$ with $D=\sum_{l=k_j+1}^{k_{j'}}E_l/l$,
 while $V^{(j')}_i$ for $k_j<i\le k_{j'}$ depends only on $E_{k_j+1},\dots,E_{k_{j'}}$. Hence
 $S_j(\phi)$ is independent of $D$ and of the second group, and
 \[
-\operatorname{cov}\{S_j(\phi),S_{j'}(\phi')\}=(k_jk_{j'})^{-1/2}\,\E_D\Bigl[\operatorname{cov}\Bigl\{\textstyle\sum_{i\le k_j}\phi(V^{(j)}_i),\sum_{i\le k_j}\phi'(V^{(j)}_i+D)\Bigm|D\Bigr\}\Bigr].
+\operatorname{cov}\{S_j(\phi),S_{j'}(\chi)\}=(k_jk_{j'})^{-1/2}\,\E_D\Bigl[\operatorname{cov}\Bigl\{\textstyle\sum_{i\le k_j}\phi(V^{(j)}_i),\sum_{i\le k_j}\chi(V^{(j)}_i+D)\Bigm|D\Bigr\}\Bigr].
 \]
 The multiset $\{V^{(j)}_i\}_{i\le k_j}$ has the law of an independent sample of $k_j$ standard
 exponentials (R\'enyi), and both sums are symmetric functions of it, so the conditional
-covariance equals $k_j\operatorname{cov}\{\phi(E),\phi'(E+D)\}$ evaluated at the realised $D$. As
+covariance equals $k_j\operatorname{cov}\{\phi(E),\chi(E+D)\}$ evaluated at the realised $D$. As
 $D\to\log(k_{j'}/k_j)\to\log(t_{j'}/t_j)$ in probability and the map
-$d\mapsto\operatorname{cov}\{\phi(E),\phi'(E+d)\}$ is bounded and continuous (by the bounds on
-$\phi'$), dominated convergence gives the stated limit. The case $j=j'$ gives
+$d\mapsto\operatorname{cov}\{\phi(E),\chi(E+d)\}$ is bounded and continuous (by the bounds on
+$\chi'$), dominated convergence gives the stated limit. The case $j=j'$ gives
 $\operatorname{var}S_j(\phi)=\operatorname{var}\phi(E)$ exactly. \qedhere
 \end{proof}
 
@@ -223,7 +231,7 @@ on $X_{n-K,n}=u_n$ and then unconditioned.
 $T_{jl}:=\sqrt{k_j}\{\tilde\xi_j(\rho_l)-\xi\}/\xi=S_j(\psi_{\rho_l})$ and
 $\xi\Delta_K=S_m(a_\rho)$, jointly. Hence $(T_{jl},\Delta_K)$ is jointly asymptotically normal under
 $p^{\otimes K}$, and $T\dto G$, which defines $G$ and gives \eqref{eq:cov}. By Lemma~\ref{lem:clt}
-with $j'=m$ and $\phi'=a_\rho$, $\lim\operatorname{cov}(T_{jl},\xi\Delta_K)=t_j^{1/2}
+with $j'=m$ and $\chi=a_\rho$, $\lim\operatorname{cov}(T_{jl},\xi\Delta_K)=t_j^{1/2}
 \operatorname{cov}\{\psi_{\rho_l}(E),a_\rho(E+\log t_j^{-1})\}$. Since
 $a_\rho(E+r)=e^{\rho r}a_\rho(E)+(e^{\rho r}-1)$ and $\psi_{\rho_l}$ has mean zero, this equals
 $t_j^{1/2-\rho}\operatorname{cov}\{\psi_{\rho_l}(E),a_\rho(E)\}=t_j^{1/2-\rho}\beta(\rho,\rho_l)$
@@ -255,7 +263,7 @@ $q_{u_n}^{\otimes K}$ by contiguity. \qedhere
 By Theorem~\ref{thm:bvm}(i) and continuity of the normal distribution function, the endpoints of
 $B_j(\rho)$ are $\tilde\xi_j(\rho)\pm c(\rho)\xi s(\rho)/\sqrt{k_j}+o_P(k_j^{-1/2})$. The
 exact $(1-\alpha)$-quantile of the pivot under Pareto tails at the actual grid converges to
-$c(\rho)$, because by Lemma~\ref{lem:clt} the pivot converges in law to $\max_j|G_j|/s(\rho)$, whose
+$c(\rho)$, because by Lemmas~\ref{lem:clt} and~\ref{lem:scores}(v) the pivot converges in law to $\max_j|G_j|/s(\rho)$, whose
 distribution function is continuous and strictly increasing on $(0,\infty)$ for a non-degenerate
 Gaussian vector. (The computed constant is a Monte Carlo estimate of this quantile; the theory
 refers to the exact quantile, or to a Monte Carlo size that grows with $n$.) Hence $\{\xi\in B_j(\rho)\ \forall j\}$ differs from
@@ -344,8 +352,9 @@ $\beta(\rho_1,\rho_l)>0$ by Lemma~\ref{lem:beta} and $\mu_{jl}\to+\infty$ for ev
 almost surely, $\min_l(G_{jl}+\mu_{jl}-c_ls_l)\to G_{j1}-c_1s_1$ and
 $\max_l(G_{jl}+\mu_{jl}+c_ls_l)\to+\infty$, so the indicator of the coverage event converges to
 the indicator of $\{\max_jZ_{j1}\le c_1\}$ except on the null set $\{\max_jZ_{j1}=c_1\}$. By
-dominated convergence $\Gamma_\Mesh(\rho_1,\lambda)\to1-\pi_1$. The case $\rho=\rho_L$,
-$\lambda\to-\infty$ is the mirror image and gives $1-\Prob(\min_jZ_{jL}<-c_L)=1-\pi_L$. Since
+dominated convergence $\Gamma_\Mesh(\rho_1,\lambda)\to1-\pi_1$. For $\rho=\rho_L$ and
+$\lambda\to-\infty$, $\mu_{jL}=0$ and, for $l<L$, $\beta(\rho_L,\rho_l)<0$, so again $\mu_{jl}\to+\infty$;
+the same argument gives $\Gamma_\Mesh(\rho_L,\lambda)\to1-\Prob(\max_jZ_{jL}>c_L)=1-\pi_L$. Since
 $\rho_1,\rho_L\in R$, the infimum over $R\times\R$ is at most both limits; the lower bound is
 Theorem~\ref{thm:uniform}. \qedhere
 \end{proof}
@@ -371,7 +380,7 @@ $\{I=\emptyset\}\subset\{\xi\notin I\}$. \qedhere
 On $\{X_{n-K,n}>x_0\}$ the relative excesses above $X_{n-K,n}$ are an independent Pareto sample
 (as a set), so by R\'enyi's representation the vector $(\hat\xi_j(\rho')/\xi)_{j\le m}$ has a law
 that depends only on the grid and $\rho'$, and so does
-$Q=\max_j\sqrt{k_j}|\hat\xi_j(\rho')/\xi-1|/s(\rho')$. $Q$ has a continuous distribution because the $\hat\xi_j(\rho')$ are smooth non-constant functions of the continuously distributed $E_l$. If $c$ is the $(1-\alpha)$-quantile of $Q$,
+$Q=\max_j\sqrt{k_j}|\hat\xi_j(\rho')/\xi-1|/s(\rho')$. $Q$ has a continuous distribution: each $\hat\xi_j(\rho')$ is a real-analytic function of $(E_l)$ on the open positive orthant and is positively homogeneous of degree one, hence non-constant, so its level sets have Lebesgue measure zero, and $\Prob(Q=c)\le\sum_j\Prob\{\sqrt{k_j}|\hat\xi_j(\rho')/\xi-1|=c\,s(\rho')\}=0$. If $c$ is the $(1-\alpha)$-quantile of $Q$,
 then $\Prob(Q\le c)=1-\alpha$, and $\{Q\le c\}$ is the event that $\xi$ lies in every interval of
 the stated band. \qedhere
 \end{proof}
